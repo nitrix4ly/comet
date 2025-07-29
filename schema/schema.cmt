@@ -1,0 +1,59 @@
+model User {
+  id        Int      @id @auto
+  email     String   @unique
+  name      String
+  age       Int      @default(0)
+  isActive  Boolean  @default(true)
+  bio       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  posts     Post[]   @relation("UserPosts")
+  profile   Profile? @relation("UserProfile")
+}
+
+model Post {
+  id        Int      @id @auto
+  title     String
+  content   String?
+  published Boolean  @default(false)
+  authorId  Int
+  categoryId Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  author    User     @relation("UserPosts", fields: [authorId], references: [id])
+  category  Category? @relation("CategoryPosts", fields: [categoryId], references: [id])
+  tags      Tag[]    @relation("PostTags")
+}
+
+model Category {
+  id        Int      @id @auto
+  name      String   @unique
+  slug      String   @unique
+  createdAt DateTime @default(now())
+  
+  posts     Post[]   @relation("CategoryPosts")
+}
+
+model Tag {
+  id        Int      @id @auto
+  name      String   @unique
+  color     String?
+  createdAt DateTime @default(now())
+  
+  posts     Post[]   @relation("PostTags")
+}
+
+model Profile {
+  id        Int      @id @auto
+  userId    Int      @unique
+  avatar    String?
+  website   String?
+  github    String?
+  twitter   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  user      User     @relation("UserProfile", fields: [userId], references: [id])
+}
