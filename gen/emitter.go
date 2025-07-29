@@ -1,7 +1,6 @@
 package gen
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
