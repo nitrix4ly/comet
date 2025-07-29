@@ -58,7 +58,7 @@ comet migrate
 
 ## Documentation
 
-See [docs/README.md](docs/README.md) for complete setup and usage instructions.
+See [docs/GUIDE.md](docs/README.md) for complete setup and usage instructions.
 
 <div align="center">
 
