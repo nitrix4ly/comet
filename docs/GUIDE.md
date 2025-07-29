@@ -1,6 +1,20 @@
-# 📚 Comet Documentation
+# ☄️ Comet Documentation
 
-## 💻 Installation
+<div align="center">
+
+![☄️ Comet Documentation](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=300&fit=crop&crop=center&auto=format&q=80)
+
+*Complete guide to using ☄️ Comet ORM*
+
+</div>
+
+## Installation
+
+<div align="center">
+
+![Installation](https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=600&h=200&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 ### From Go Install (Recommended)
 ```bash
@@ -15,7 +29,13 @@ go build -o comet ./cli
 sudo mv comet /usr/local/bin/
 ```
 
-## 🧩 Schema Definition (.cmt)
+## Schema Definition (.cmt)
+
+<div align="center">
+
+![Schema Design](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=250&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 Create schema files in the `schema/` directory with `.cmt` extension:
 
@@ -60,7 +80,13 @@ model Post {
 - `?` - Optional field (nullable)
 - `[]` - Array/slice
 
-## 🔧 CLI Commands
+## CLI Commands
+
+<div align="center">
+
+![CLI Commands](https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=600&h=200&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 ### Generate Models
 ```bash
@@ -87,7 +113,13 @@ comet migrate --dry-run        # Preview migrations
 comet seed --file seeds/users.go
 ```
 
-## 🔁 Development Workflow
+## Development Workflow
+
+<div align="center">
+
+![Development Workflow](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=250&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 1. **Define Schema**: Create or modify `.cmt` files in `schema/`
 2. **Generate Code**: Run `comet gen` to create Go models
@@ -101,7 +133,13 @@ comet gen
 comet migrate
 ```
 
-## 🔌 Database Configuration
+## Database Configuration
+
+<div align="center">
+
+![Database Configuration](https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=200&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 ### Connection Strings
 
@@ -143,7 +181,13 @@ user:password@tcp(localhost:3306)/database?parseTime=true
 file:./database.db?cache=shared&mode=rwc
 ```
 
-## 🧪 Example Usage
+## Example Usage
+
+<div align="center">
+
+![Code Examples](https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=250&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 ### Basic CRUD Operations
 
@@ -233,7 +277,13 @@ post := &models.Post{
 err = post.Save(ctx)
 ```
 
-## 🧪 Running Examples
+## Running Examples
+
+<div align="center">
+
+![Testing](https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=200&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 Navigate to the `testz/` directory:
 
@@ -242,7 +292,13 @@ cd testz/
 go run blog.go
 ```
 
-## 🛠 Common Errors & Troubleshooting
+## Common Errors & Troubleshooting
+
+<div align="center">
+
+![Troubleshooting](https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=200&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 ### "models package not found"
 **Solution**: Run `comet gen` to generate models first.
@@ -261,7 +317,13 @@ go run blog.go
 - Add database indexes for frequently queried fields
 - Use `Select()` to fetch only needed columns
 
-## 🔧 Advanced Configuration
+## Advanced Configuration
+
+<div align="center">
+
+![Advanced Configuration](https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=200&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 ### Custom Naming Conventions
 ```yaml
@@ -286,7 +348,13 @@ logging:
   sql_queries: true    # Log all SQL queries
 ```
 
-## 🚀 Best Practices
+## Best Practices
+
+<div align="center">
+
+![Best Practices](https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=600&h=200&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 1. **Schema Design**: Keep models focused and avoid deep nesting
 2. **Migrations**: Never edit existing migrations, create new ones
@@ -294,7 +362,13 @@ logging:
 4. **Testing**: Use SQLite for fast tests, production database for integration tests
 5. **Error Handling**: Always check errors from database operations
 
-## 📈 Migration to Comet
+## Migration to ☄️ Comet
+
+<div align="center">
+
+![Migration](https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=200&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 ### From GORM
 ```go
@@ -314,7 +388,13 @@ rows, err := db.Query("SELECT * FROM users WHERE age > $1", 18)
 users, err := models.User.Find().Where("age", ">", 18).All(ctx)
 ```
 
-## 🔗 Integration Examples
+## Integration Examples
+
+<div align="center">
+
+![Integration](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=200&fit=crop&crop=center&auto=format&q=80)
+
+</div>
 
 ### With Gin
 ```go
@@ -335,4 +415,14 @@ func (r *queryResolver) Users(ctx context.Context) ([]*models.User, error) {
 }
 ```
 
-This documentation covers the essential aspects of using Comet. For more advanced features and updates, check the GitHub repository.
+This documentation covers the essential aspects of using ☄️ Comet. For more advanced features and updates, check the GitHub repository.
+
+---
+
+<div align="center">
+
+![☄️ Comet Footer](https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&h=200&fit=crop&crop=center&auto=format&q=80)
+
+**Built with ❤️ by [Nitrix](https://github.com/nitrix4ly)**
+
+</div>
